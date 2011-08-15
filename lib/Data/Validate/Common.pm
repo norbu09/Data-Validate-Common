@@ -10,7 +10,7 @@ Data::Validate::Common - Some common validator methods
 
 =head1 VERSION
 
-Version 0.1
+Version 0.1.1.1.1.1
 
 =cut
 
