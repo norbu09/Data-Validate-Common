@@ -52,6 +52,17 @@ sub is_email {
     return $user . '@' . $domain;
 }
 
+=head2 is_valid_email
+
+Calls `is_email` and returns true or false and not the string itself.
+
+=cut
+
+sub is_valid_email {
+    my ($self, $email) = @_;
+    return ($self->is_email($email) ? 1 : 0);
+}
+
 =head2 is_domain
 
 Just calles L<Data::Validate::Domain> for the moment but leaves room for
@@ -66,6 +77,17 @@ sub is_domain {
     return Data::Validate::Domain::is_domain($value);
 }
 
+=head2 is_valid_domain
+
+Calls `is_domain` and returns true or false and not the string itself.
+
+=cut
+
+sub is_valid_domain {
+    my ($self, $domain) = @_;
+    return ($self->is_domain($domain) ? 1 : 0);
+}
+
 =head2 is_hostname
 
 Just calles L<Data::Validate::Domain> for the moment but leaves room for
@@ -78,6 +100,17 @@ sub is_hostname {
 
     return unless defined $value;
     return Data::Validate::Domain::is_hostname($value);
+}
+
+=head2 is_valid_hostname
+
+Calls `is_hostname` and returns true or false and not the string itself.
+
+=cut
+
+sub is_valid_hostname {
+    my ($self, $hostname) = @_;
+    return ($self->is_hostname($hostname) ? 1 : 0);
 }
 
 =head2 is_username
@@ -98,6 +131,17 @@ sub is_username {
     return;
 }
 
+=head2 is_valid_username
+
+Calls `is_username` and returns true or false and not the string itself.
+
+=cut
+
+sub is_valid_username {
+    my ($self, $username) = @_;
+    return ($self->is_username($username) ? 1 : 0);
+}
+
 =head2 is_phone
 
 Tests for a valid phone number - needs more work done to it though
@@ -113,6 +157,17 @@ sub is_phone {
     }
     return;
 }   
+
+=head2 is_valid_phone
+
+Calls `is_phone` and returns true or false and not the string itself.
+
+=cut
+
+sub is_valid_phone {
+    my ($self, $phone) = @_;
+    return ($self->is_phone($phone) ? 1 : 0);
+}
 
 
 =head1 AUTHOR

@@ -2,7 +2,7 @@
 
 use lib './lib';
 use strict;
-use Test::More tests => 7;
+use Test::More tests => 12;
 
 BEGIN { use_ok( 'Data::Validate::Common' ); }
 
@@ -19,4 +19,5 @@ my $users = [
 
 foreach my $user (@{$users}) {
     is($validate->is_username($user), $user, 'testing: is_username '.$user);
+    is(Data::Validate::Common->is_valid_username($user), 1, 'testing: is_valid_username '.$user);
 }

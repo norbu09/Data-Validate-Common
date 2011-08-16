@@ -2,7 +2,7 @@
 
 use lib './lib';
 use strict;
-use Test::More tests => 8;
+use Test::More tests => 13;
 
 BEGIN { use_ok( 'Data::Validate::Common' ); }
 BEGIN { use_ok( 'Data::Validate::Domain' ); }
@@ -20,4 +20,5 @@ my $mail = [
 
 foreach my $mail (@{$mail}) {
     is($validate->is_email($mail), $mail, 'testing: is_email '.$mail);
+    is(Data::Validate::Common->is_valid_email($mail), 1, 'testing: is_valid_email '.$mail);
 }
