@@ -9,9 +9,9 @@ t/00-load.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
-t/boilerplate.t
 t/is_domain.t
 t/is_email.t
 t/is_hostname.t
 t/is_username.t
-
+docs/Common.html
+docs/docco.css

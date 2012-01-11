@@ -10,11 +10,11 @@ Data::Validate::Common - Some common validator methods
 
 =head1 VERSION
 
-Version 0.2.1.1.1.1.1
+Version 0.3.3.3.3.2.1.1.1.1.1
 
 =cut
 
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 
 =head1 SYNOPSIS
 
